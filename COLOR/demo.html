@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      .box {
+        width: 449px;
+        height: 427px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+      }
+      .top-strip {
+        height: 59px;
+        background-color: black;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      .bottom-icons {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+      .icon-text {
+        font-size: 10px;
+      }
+      .stylecolor {
+        text-align: center;
+      }
+      /* input[type="color"]{
+        margin-left: 30px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="top-strip"></div>
+        <h3
+          id="colorcode"
+          class="d-flex justify-content-center align-items-center"
+        ></h3>
+
+        <div class="bottom-icons">
+          <div class="d-flex flex-column align-items-center">
+            <img src="./img/paint.svg" class="icon" id="paletteIcon" />
+            <p class="icon-text p-2">color picker</p>
+            <input type="color" id="colorInput" style="display: none" />
+          </div>
+
+          <div class="d-flex flex-column align-items-center">
+            <img src="./img/edit-pencil.svg" class="icon" id="editIcon" />
+            <p class="icon-text p-2">color picker</p>
+          </div>
+
+          <div class="d-flex flex-column align-items-center">
+            <img src="./img/controller.svg" class="icon" id="btn" />
+            <p class="icon-text p-2">color picker</p>
+          </div>
+
+          <div class="d-flex flex-column align-items-center" id="clipboardIcon">
+            <img src="./img/Vector.svg" class="icon" />
+            <p class="icon-text p-2">color picker</p>
+          </div>
+
+          <div class="d-flex flex-column align-items-center" id="historyIcon">
+            <img src="./img/clock.svg" class="icon" />
+            <p class="icon-text p-2">color picker</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="historyModal"
+      tabindex="-1"
+      aria-labelledby="historyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="historyModalLabel">Color History</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="historyBody">
+            <!-- Color history will be added here -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

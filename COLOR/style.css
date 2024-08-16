@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  transition: 1s;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub {
+  width: 20rem;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.icon-row i {
+  font-size: 24px;
+}
